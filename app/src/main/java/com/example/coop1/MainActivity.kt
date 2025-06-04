@@ -6,8 +6,10 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.api.net.PlacesClient
@@ -54,11 +56,19 @@ fun PlacesReviewScreen(placesClient: PlacesClient) {
         }
     }
 
-    Surface(
+    Box(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(30.dp),
+        contentAlignment = Alignment.Center
+
     ) {
-        Text(text = placeInfo.value, style = MaterialTheme.typography.bodyLarge)
+        Text(text = placeInfo.value, fontSize = 30.sp )
     }
 }
+
+// This can be expanded to show up to 5 reviews (Max set by Google API TOS)
+
+// In my Final Project, I plan to search for multiple business types, store them in a database,
+// then display them in a clickable list which will then show the reviews when a business is clicked on
+

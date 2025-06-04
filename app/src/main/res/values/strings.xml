@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Coop1</string>
+        <!-- Add your Places API Key here -->
+    <string name="places_api_key">${placesApiKey}</string>
+
+
+    <!-- <string name="app_name">Your App Name</string> -->
+</resources>
